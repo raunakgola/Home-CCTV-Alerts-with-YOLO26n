@@ -1,0 +1,8 @@
+.env
+zones.json
+*.xlsx
+*.pt
+.venv/
+__pycache__/
+bytetrack_tuned.yaml
+!config/bytetrack_tuned.yaml

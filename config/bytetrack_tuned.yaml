@@ -1,0 +1,10 @@
+# ByteTrack settings used for the 7-camera CCTV (about 3 analysed frames per second per camera).
+# cctv_alert_live.py builds this file at start-up from Ultralytics' own bytetrack.yaml and
+# changes only track_buffer and track_low_thresh; this copy documents the values it ends up with.
+tracker_type: bytetrack
+track_high_thresh: 0.25   # detections above this start / continue tracks
+track_low_thresh: 0.2     # weaker detections may still keep an existing track alive (--keep-conf)
+new_track_thresh: 0.25    # a detection must be at least this confident to create a NEW track
+track_buffer: 36          # frames a lost track is remembered = max(15, merge_seconds * fps * 1.5)
+match_thresh: 0.8         # how strictly boxes are matched to existing tracks
+fuse_score: true          # combine IoU with detection confidence when matching
